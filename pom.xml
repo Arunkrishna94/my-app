@@ -35,12 +35,12 @@
 	<distributionManagement>
 		 <snapshotRepository>
 		    <id>nexus</id>
-		    <url>http://172.31.40.87:8080/repository/maven-snapshots/</url>
+		    <url>http://172.31.43.154:8080/repository/maven-snapshots/</url>
 		 </snapshotRepository>
 		
 		<repository>
 		    <id>nexus</id>
-		    <url>http://172.31.40.87:8080/repository/maven-releases/</url>
+		    <url>http://172.31.43.154:8080/repository/maven-releases/</url>
 		</repository>
   	</distributionManagement>
 	
