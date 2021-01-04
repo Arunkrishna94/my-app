@@ -1,13 +1,14 @@
-- hosts: localhost
-  remote_user: ansadmin
-  become: yes
-  tasks:
-    - name: going to create ec2 instance
-      ec2:
-         key_name: LM
-         region: "ap-south-1"
-         instance_type: t2.micro
-         image: ami-052c08d70def0ac62
-         count: 1
-         vpc_subnet_id: subnet-53b6bf3b
-         assign_public_ip: yes
+--- 
+ - hosts: localhost
+   remote_user: ec2-user
+   become: yes
+   tasks:
+      - name: Provisioning an ec2 instance
+        ec2:
+           key_name: LM
+           instance_type: t2.micro
+           image: ami-04b1ddd35fd71475a
+           count: 1
+           vpc_subnet_id: subnet-53b6bf3b
+           region: "ap-south-1"
+           assign_public_ip: yes
